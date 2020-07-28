@@ -57,7 +57,22 @@ stages:
             script: |
               # Write your PowerShell commands here.              
               Write-Host "$(acrName)"
-     
+    - task: CopyFiles@2
+      inputs:
+        SourceFolder: '/'
+        Contents: '**'
+        TargetFolder: '/appcode'
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        ArtifactName: 'drop_container_code'
+        publishLocation: 'Container'
+    - task: DownloadBuildArtifacts@0
+      inputs:
+        buildType: 'current'
+        downloadType: 'single'
+        artifactName: 'drop_container_code'
+        downloadPath: '$(System.ArtifactsDirectory)'
     - task: AzureCLI@2
       inputs:
         azureSubscription: 'AI-BoldPlay Service Connection'
