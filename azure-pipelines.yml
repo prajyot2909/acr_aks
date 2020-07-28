@@ -61,7 +61,7 @@ stages:
       inputs:
         SourceFolder: '$(agent.builddirectory)'
         Contents: '**'
-        TargetFolder: '/appcode'
+        TargetFolder: '$(Build.ArtifactStagingDirectory)'
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
