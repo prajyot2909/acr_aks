@@ -3,13 +3,13 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "acrName": {
-        "value": "acrCluster01" 
+        "value": "acrCluster012807" 
       },
       "acrAdminUserEnabled": {
         "value": true
       },
       "clusterName": {
-        "value": "AKSCluster01"
+        "value": "AKSCluster012807"
     },
     "location": {
         "value": "West US"
