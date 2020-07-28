@@ -88,7 +88,8 @@ stages:
         azureSubscription: 'AI-BoldPlay Service Connection'
         scriptType: 'bash'
         scriptLocation: 'inlineScript'
-        inlineScript: 'az acr login -n ''acrCluster012807'' --subscription ''US-AZSUB-AME-CBCAP-NPD'''
+        inlineScript: 
+          az acr login -n 'acrCluster012807' --subscription 'US-AZSUB-AME-CBCAP-NPD'
     
           
     
