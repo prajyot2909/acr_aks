@@ -47,7 +47,6 @@ stages:
         templateLocation: 'Linked artifact'
         csmFile: '/home/vsts/work/1/a/ACRAKS.json'
         csmParametersFile: '/home/vsts/work/1/a/ACRAKSParamter.json'
-        overrideParameters: '/home/vsts/work/1/a/ACRAKSParamter.json'
         deploymentMode: 'Incremental'
         deploymentName: 'acrDeployement'
         deploymentOutputs: 'acrName'
