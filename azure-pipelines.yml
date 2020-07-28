@@ -43,7 +43,7 @@ stages:
         subscriptionId: '9ae9cf58-0498-42ff-8666-95badd20b8cd'
         action: 'Create Or Update Resource Group'
         resourceGroupName: 'AZRG-USE2-CON-030009-NPD'
-        location: 'Central US'
+        location: 'EAST US 2'
         templateLocation: 'Linked artifact'
         csmFile: '/home/vsts/work/1/a/ACRAKS.json'
         csmParametersFile: '/home/vsts/work/1/a/ACRAKSParamter.json'
