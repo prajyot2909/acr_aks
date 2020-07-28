@@ -96,20 +96,20 @@ stages:
         scriptType: 'bash'
         scriptLocation: 'inlineScript'
         inlineScript: |
-          az acr build --image sample/hello-world:v1 \
+          az acr build --image sample/hello-world:$(Build.BuildNumber) \
             --registry acrCluster012807\
             --file Dockerfile .
-    - task: Kubernetes@1
-      inputs:
-        connectionType: 'Azure Resource Manager'
-        azureSubscriptionEndpoint: 'AI-BoldPlay Service Connection'
-        azureResourceGroup: 'AZRG-USE2-CON-030009-NPD'
-        kubernetesCluster: 'AKSCluster01'
-        command: 'apply'
-        secretType: 'dockerRegistry'
-        containerRegistryType: 'Azure Container Registry'
-        azureSubscriptionEndpointForSecrets: 'AI-BoldPlay Service Connection'
-        azureContainerRegistry: 'acrcluster012807.azurecr.io'
+    # - task: Kubernetes@1
+    #   inputs:
+    #     connectionType: 'Azure Resource Manager'
+    #     azureSubscriptionEndpoint: 'AI-BoldPlay Service Connection'
+    #     azureResourceGroup: 'AZRG-USE2-CON-030009-NPD'
+    #     kubernetesCluster: 'AKSCluster01'
+    #     command: 'apply'
+    #     secretType: 'dockerRegistry'
+    #     containerRegistryType: 'Azure Container Registry'
+    #     azureSubscriptionEndpointForSecrets: 'AI-BoldPlay Service Connection'
+    #     azureContainerRegistry: 'acrcluster012807.azurecr.io'
           
            
     
@@ -117,11 +117,3 @@ stages:
 
 
     
-
- 
-# - stage : CodeDeployment
-#   dependsOn: InfrastructureDeployment 
-#   pool:
-#    vmImage: 'ubuntu-latest' 
-#   jobs:
-#     - job: CodeDeployment
