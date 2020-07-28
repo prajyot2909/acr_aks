@@ -46,7 +46,7 @@ stages:
         location: 'EAST US 2'
         templateLocation: 'Linked artifact'
         csmFile: '/home/vsts/work/1/a/ACRAKS.json'
-        csmParametersFile: '/home/vsts/work/1/a/ACRAKSParamter.json'
+        csmParametersFile: '/home/vsts/work/1/a/ACRAKSParameter.json'
         deploymentMode: 'Incremental'
         deploymentName: 'acrDeployement'
         deploymentOutputs: 'acrName'
