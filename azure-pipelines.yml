@@ -59,7 +59,7 @@ stages:
               Write-Host "$(acrName)"
     - task: CopyFiles@2
       inputs:
-        SourceFolder: '/'
+        SourceFolder: '$(agent.builddirectory)'
         Contents: '**'
         TargetFolder: '/appcode'
     - task: PublishBuildArtifacts@1
