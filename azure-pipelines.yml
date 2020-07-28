@@ -81,7 +81,7 @@ stages:
         inlineScript: 
           az login --service-principal --username 'b203f197-0439-4458-98c1-124f5a96cc95' --password 'MkQlQDR4Jkp9L3s/aHgtT0tjcV8hPylTPXtzbkdSNzpJZw==' --tenant '36da45f1-dd2c-4d1f-af13-5abe46b99921' 
           az account set --subscription 'US-AZSUB-AME-CBCAP-NPD'
-          az acr login -n 'acrCluster012807' --subscription 'US-AZSUB-AME-CBCAP-NPD'
+          # az acr login -n 'acrCluster012807' --subscription 'US-AZSUB-AME-CBCAP-NPD'
           
     
             
