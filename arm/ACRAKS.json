@@ -37,7 +37,7 @@
       ]
     },
     "clusterName": {
-            "defaultValue": "aks101cluster",
+            "defaultValue": "aks101cluster2807",
             "type": "String",
             "metadata": {
                 "description": "The name of the Managed Cluster resource."
