@@ -83,15 +83,26 @@ stages:
           # az account set --subscription 'US-AZSUB-AME-CBCAP-NPD'
     - task: AzureCLI@2
       displayName:  Login to ACR
-      inputs:
-      
+      inputs:      
         azureSubscription: 'AI-BoldPlay Service Connection'
         scriptType: 'bash'
         scriptLocation: 'inlineScript'
         inlineScript: 
           az acr login -n 'acrCluster012807' --subscription 'US-AZSUB-AME-CBCAP-NPD'
+    - task: AzureCLI@2
+      displayName: Build and Push image to ACR
+      inputs:
+        azureSubscription: 'AI-BoldPlay Service Connection'
+        scriptType: 'bash'
+        scriptLocation: 'inlineScript'
+        inlineScript: |
+          az acr build --image sample/hello-world:v1 \
+            --registry acrCluster012807\
+            --file Dockerfile .
     
-          
+    
+    
+    
     
             
            
